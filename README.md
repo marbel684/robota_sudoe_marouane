@@ -45,18 +45,25 @@ depends on the local laboratory setup.
 
 ## Software Stack
 
-The main software used in the project is:
+<p align="left">
+  <img src="https://img.shields.io/badge/Ubuntu-24.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu 24.04">
+  <img src="https://img.shields.io/badge/ROS_2-Jazzy-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS 2 Jazzy">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
+</p>
 
-- Ubuntu 24.04 LTS
-- ROS 2 Jazzy
-- Python
-- C++
-- Universal Robots ROS 2 driver
-- MoveIt
-- RViz
-- Gazebo Harmonic
-- KDL / Eigen
-- `rokubimini_ethercat`
+<p align="left">
+  <img src="https://img.shields.io/badge/MoveIt-ROS_2-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="MoveIt">
+  <img src="https://img.shields.io/badge/RViz-ROS_2-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="RViz">
+  <img src="https://img.shields.io/badge/Gazebo-Harmonic-7A7A7A?style=for-the-badge" alt="Gazebo Harmonic">
+  <img src="https://img.shields.io/badge/Eigen-C%2B%2B-00599C?style=for-the-badge" alt="Eigen">
+</p>
+
+<p align="left">
+  <img src="https://img.shields.io/badge/KDL-Robot%20Kinematics-444444?style=for-the-badge" alt="KDL">
+  <img src="https://img.shields.io/badge/Universal%20Robots-UR5e-000000?style=for-the-badge" alt="Universal Robots UR5e">
+  <img src="https://img.shields.io/badge/rokubimini__ethercat-EtherCAT-444444?style=for-the-badge" alt="rokubimini_ethercat">
+</p>
 
 ---
 
