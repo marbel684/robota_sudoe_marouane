@@ -1,82 +1,96 @@
-# Force-Guided Robotic Manipulation with ROS 2
+# ROBOTA-SUDOE — UR5e ROS 2 Control and Admittance
 
-This repository contains the software developed during my internship at
-CiTIUS, University of Santiago de Compostela.
+**Lab:** CiTIUS, University of Santiago de Compostela, Spain  
+**Project:** ROBOTA-SUDOE  
+**Robot:** Universal Robots UR5e on the KAIROS workcell  
+**OS:** Ubuntu 24.04 LTS  
+**ROS 2:** Jazzy Jalisco  
 
-The project focuses on a force-guided manipulation system for a UR5e robot
-installed in the KAIROS workcell. The work includes the ROS 2 migration,
-robot and gripper control, mechanical integration, force/torque sensing and
-admittance control.
+---
 
-## Hardware
+## What is this project?
 
-The main hardware used in the project is:
+This repository contains the ROS 2 software developed during my internship at
+CiTIUS.
 
-- Universal Robots UR5e
-- Schunk EGK50 gripper
-- OnRobot HEX-E force/torque sensor
-- KAIROS workcell
+The project focuses on the control of a UR5e robot for a collaborative
+manipulation task. The robot is used for Pick and Place and demolding
+operations with a Schunk EGK50 gripper.
 
-## Software
+The project also includes the integration of an OnRobot HEX-E force/torque
+sensor and the implementation of an admittance controller. The objective is to
+make the robot react to forces applied by the user instead of following only
+predefined positions.
 
-The project was developed using:
+The different parts of the system were developed and tested progressively,
+starting with the ROS 2 environment and robot control, then the gripper and
+mechanical integration, and finally the force-guided control.
+
+---
+
+## Hardware Overview
+
+| Component | Description |
+|-----------|-------------|
+| UR5e | 6-DOF collaborative robot |
+| KAIROS | Robotic workcell |
+| SCHUNK EGK50 | Electric 2-finger gripper |
+| OnRobot HEX-E | 6-axis force/torque sensor |
+| Development PC | Computer running ROS 2 Jazzy |
+
+The exact network configuration depends on the laboratory setup and is not
+included in the public repository.
+
+---
+
+## Software Stack
+
+The main software used in the project is:
 
 - Ubuntu 24.04 LTS
 - ROS 2 Jazzy
 - Python
 - C++
+- Universal Robots ROS 2 driver
 - MoveIt
 - RViz
 - Gazebo Harmonic
+- KDL / Eigen
+- `rokubimini_ethercat`
 
-## Main work
+---
 
-The main tasks carried out during the project were:
-
-- migration of the existing environment to ROS 2 Jazzy;
-- checking and adapting the URDF/Xacro/SRDF configuration;
-- setup of MoveIt, RViz and Gazebo;
-- communication with the Schunk EGK50 through TCP;
-- CAD design of the mechanical adapters and demolding fingers;
-- 3D printing and physical integration on the KAIROS workcell;
-- development of the Pick and Place and demolding sequence;
-- integration and calibration of the OnRobot HEX-E sensor;
-- implementation of an admittance controller;
-- numerical validation of the controller and Jacobian calculation;
-- preparation of teaching and demonstration recording.
-
-## Current status
-
-The Pick and Place and demolding sequence was tested on the physical robot.
-
-The custom 3D-printed fingers can grasp, demold and place the object correctly.
-However, the PLA fingers can deform or break when higher gripping forces are
-required. A more resistant version is therefore being considered.
-
-The HEX-E sensor was calibrated using known loads. A force of approximately
-5 N was measured, and the communication and force measurement were validated.
-
-The admittance controller was implemented in C++ and numerically validated.
-The current development uses a 250 Hz control loop.
-
-The complete physical validation of the admittance loop has not been finished.
-The next step is to connect the calibrated HEX-E measurements to the physical
-controller and test the resulting compliant motion progressively on the robot.
-
-## Repository structure
+## Repository Structure
 
 ```text
 robota_sudoe_marouane/
+├── README.md
+├── config/
+│   ├── admittance_teach.yaml
+│   ├── bota_hex_e.json
+│   └── teach.yaml
+├── docs/
+│   ├── SETUP.md
+│   ├── SCHUNK_EGK_SETUP.md
+│   └── TROUBLESHOOTING.md
+├── legacy/
+│   ├── compliance_demo.py
+│   ├── fastdds_no_shm.xml
+│   ├── force_sensor_eth_publisher_ros2.py
+│   ├── schunk_gripper_node.py
+│   └── ur_force_zeroed.py
+├── scripts/
+│   ├── build.sh
+│   └── check_bota.sh
 ├── src/
 │   ├── admittance_control_ros2/
 │   ├── robota_sudoe_bringup/
 │   ├── robota_sudoe_imitation/
 │   └── robota_sudoe_teach/
-├── config/
-├── docs/
 ├── validation/
-├── legacy/
-├── scripts/
+│   ├── README.md
+│   ├── validate_six_axis.py
+│   └── validation_output.txt
+├── CHANGELOG.md
 ├── MIGRATION.md
-├── VALIDATION_REPORT.md
-└── README.md
+└── VALIDATION_REPORT.md
