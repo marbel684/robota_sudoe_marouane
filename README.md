@@ -798,8 +798,5 @@ still the next step.
 ---
 
 # Author
-
-Marouane Belhaddade Zanati  
-SIGMA Clermont  
-CiTIUS — University of Santiago de Compostela  
-ROBOTA-SUDOE
+Marouane Belhaddade Zanati — SIGMA Clermont (May–Sept 2026)
+Mohamed Ali Jomaa Ghouil — SIGMA Clermont / ENISo (May–Sept 2026)
