@@ -1,0 +1,33 @@
+admittance_control:
+  ros__parameters:
+    sensor: ethercat
+    tool_frame: tool0
+    base_frame: base_link
+
+    M_trans: 12.0
+    M_rot: 0.10
+
+    # SI units:
+    # B_trans = N.s/m
+    # B_rot = N.m.s/rad
+    B_trans: 8.31
+    B_rot: 0.76
+
+    lambda_dls: 0.02
+
+    F_alpha: 0.08
+    V_alpha: 0.25
+
+    dead_cart: 1.5
+    dead_rot: 0.08
+
+    freq: 250.0
+
+    max_linear_speed: 0.20
+    max_angular_speed: 0.35
+    max_joint_speed: 0.60
+
+    max_linear_accel: 0.50
+    max_angular_accel: 0.80
+
+    force_timeout: 0.20

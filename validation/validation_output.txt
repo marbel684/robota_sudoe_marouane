@@ -1,0 +1,26 @@
+
+--- Dynamique 6 axes ---
+dt = 0.004000 s
+max dv translation = 0.002000 m/s
+max dw rotation = 0.003200 rad/s
+translation pole = -0.692500 1/s
+rotation pole = -7.600000 1/s
+5 N effective force = 3.5000 N
+theoretical translational steady speed = 0.421179 m/s
+0.15 Nm effective torque = 0.0700 Nm
+theoretical angular steady speed = 0.092105 rad/s
+
+--- Saturations ---
+max observed acceleration = 0.500000 m/s^2
+limit = 0.500000 m/s^2
+final speed = 0.200000 m/s
+--- Jacobien UR5e ---
+config 0: sigma_min=1.736243e-17, condition=2.105e+12, ||JJ#v-v||=8.005130e-02
+config 1: sigma_min=3.177594e-17, condition=2.158e+12, ||JJ#v-v||=8.774966e-02
+config 2: sigma_min=1.699850e-01, condition=1.200e+01, ||JJ#v-v||=2.775929e-04
+config 3: sigma_min=1.499848e-01, condition=1.343e+01, ||JJ#v-v||=6.460601e-04
+worst reconstruction error = 8.774966e-02
+worst condition indicator = 2.158e+12
+
+VALIDATION 6 AXES TERMINEE
+Aucun mouvement robot n'a été commandé.

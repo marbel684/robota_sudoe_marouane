@@ -1,0 +1,6 @@
+teach_node:
+  ros__parameters:
+    task_directory: "~/robota_tasks"
+    sample_period: 0.02
+    pose_topic: "/cartesian_compliance_controller/current_pose"
+    wrench_topic: "/force_sensor_eth"
